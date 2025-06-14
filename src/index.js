@@ -58,7 +58,7 @@ async function showDetails(id) {
     const ingredient = meal[`strIngredient${i}`];
     const measure = meal[`strMeasure${i}`];
     if (ingredient && ingredient.trim()) {
-      ingredients.push(`${measure?.trim() || ''} ${ingredient.trim()}`);
+      ingredients.push(` ${ingredient.trim()} ${measure?.trim() || ''}`);
     }
   }
 
@@ -79,9 +79,15 @@ async function showDetails(id) {
     <h2 class="text-2xl font-bold text-gray-800 mb-4">${meal.strMeal}</h2>
     <img src="${meal.strMealThumb}" alt="${meal.strMeal}" class="w-full h-64 object-cover rounded-lg mb-6" />
     <div class="text-gray-700 space-y-4 text-sm leading-relaxed">
-      <p>${meal.strInstructions}</p>
       <p><strong class="text-gray-800">Category:</strong> ${meal.strCategory}</p>
-      <p><strong class="text-gray-800">Area:</strong> ${meal.strArea}</p>
+      <p><strong class="text-gray-800">Origin Area:</strong> ${meal.strArea}</p>
+      <p><strong class="text-gray-800">Ingredients:</strong> ${ingredients}</p>
+      <p><strong class="text-gray-800">Instructions: </strong>${meal.strInstructions}</p>
+      
+      <p> ${youtube}</p>
+      <p> ${source}</p>
+      
+      
     </div>
   `;
 
