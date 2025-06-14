@@ -77,7 +77,7 @@ async function showDetails(id) {
 
   modalContent.innerHTML = `
     <h2 class="text-2xl font-bold text-gray-800 mb-4">${meal.strMeal}</h2>
-    <img src="${meal.strMealThumb}" alt="${meal.strMeal}" class="w-full h-64 object-cover rounded-lg mb-6" />
+    <img src="${meal.strMealThumb}" alt="${meal.strMeal}" class=" h-64  rounded-lg mb-6" />
     <div class="text-gray-700 space-y-4 text-sm leading-relaxed">
       <p><strong class="text-gray-800">Category:</strong> ${meal.strCategory}</p>
       <p><strong class="text-gray-800">Origin Area:</strong> ${meal.strArea}</p>
